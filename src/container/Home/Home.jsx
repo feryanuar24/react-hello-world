@@ -16,7 +16,7 @@ class Home extends Component {
     return (
       <BrowserRouter>
         <Fragment>
-          <div className=" bg-dark p-3 mb-3">
+          <div className="bg-dark p-3 mb-3">
             <div className="container">
               <Link to="/" className="btn btn-primary me-3">
                 Home
