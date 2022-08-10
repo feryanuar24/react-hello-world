@@ -9,8 +9,6 @@ class LifecyleComp extends Component {
     };
   }
 
-  static getDerivedStateFromProps() {}
-
   componentDidMount() {
     setTimeout(() => {
       this.setState({
@@ -25,8 +23,6 @@ class LifecyleComp extends Component {
     }
     return true;
   }
-
-  getSnapshotBeforeUpdate() {}
 
   componentDidUpdate() {}
 

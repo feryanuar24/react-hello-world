@@ -3,14 +3,14 @@ import { OnlineRoot, RootPath } from "./Config";
 
 const Delete = (path, root) => {
   const promise = new Promise((resolve, reject) => {
-    axios.delete(`${root ? OnlineRoot : RootPath}/${path}`).then(
-      (result) => {
+    axios
+      .delete(`${root ? OnlineRoot : RootPath}/${path}`)
+      .then((result) => {
         resolve(result.data);
-      },
-      (err) => {
+      })
+      .catch((err) => {
         reject(err);
-      }
-    );
+      });
   });
   return promise;
 };

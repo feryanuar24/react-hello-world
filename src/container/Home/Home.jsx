@@ -8,10 +8,6 @@ import DetailPost from "../pages/BlogPost/DetailPost/DetailPost";
 import Hooks from "../pages/Hooks/Hooks";
 
 class Home extends Component {
-  state = {
-    showComponent: true,
-  };
-
   render() {
     return (
       <BrowserRouter>

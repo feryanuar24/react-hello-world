@@ -514,8 +514,7 @@
       "id": 1656555117679,
       "title": "Post #1",
       "body": "Hello world",
-      "userId": 1,
-      "isUpdate": false
+      "userId": 1
     }
   ]
 }

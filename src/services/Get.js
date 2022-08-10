@@ -3,14 +3,14 @@ import { OnlineRoot, RootPath } from "./Config";
 
 const Get = (path, root) => {
   const promise = new Promise((resolve, reject) => {
-    axios.get(`${root ? OnlineRoot : RootPath}/${path}`).then(
-      (result) => {
+    axios
+      .get(`${root ? OnlineRoot : RootPath}/${path}`)
+      .then((result) => {
         resolve(result.data);
-      },
-      (err) => {
-        reject(err);
-      }
-    );
+      })
+      .catch((err) => {
+        reject(err.response);
+      });
   });
   return promise;
 };

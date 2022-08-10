@@ -3,14 +3,14 @@ import { OnlineRoot, RootPath } from "./Config";
 
 const Post = (path, root, data) => {
   const promise = new Promise((resolve, reject) => {
-    axios.post(`${root ? OnlineRoot : RootPath}/${path}`, data).then(
-      (result) => {
+    axios
+      .post(`${root ? OnlineRoot : RootPath}/${path}`, data)
+      .then((result) => {
         resolve(result.data);
-      },
-      (err) => {
+      })
+      .catch((err) => {
         reject(err);
-      }
-    );
+      });
   });
   return promise;
 };
